@@ -1,0 +1,10 @@
+logfile <%= @conf['logfile'] %>
+verbose <%= @conf['verbose'] %>
+period <%= @conf['period'] %>
+
+<% @conf['providers'].each do |provider| %>
+system <%= provider['system'] %>
+  username <%= provider['username'] %>
+  password <%= provider['password'] %>
+  alias <%= provider['alias'] %>
+<% end %>
